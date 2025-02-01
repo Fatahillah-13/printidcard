@@ -21,7 +21,7 @@
             <!-- Left navbar links -->
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i
+                    <a class="nav-link" id="pushmenu" data-widget="pushmenu" href="#" role="button"><i
                             class="fas fa-bars"></i></a>
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
@@ -290,9 +290,12 @@
 
             // Event listener untuk tautan navigasi
             $('.nav-link').on('click', function(e) {
-                e.preventDefault();
+                // Cek apakah tautan memiliki data-page
                 const page = $(this).data('page');
-                loadContent(page);
+                if (page) { // Hanya panggil loadContent jika ada data-page
+                    e.preventDefault();
+                    loadContent(page);
+                }
             });
 
             // Muat konten awal
