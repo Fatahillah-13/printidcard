@@ -11,6 +11,8 @@
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <link rel="stylesheet" href="https://adminlte.io/themes/v3/plugins/fontawesome-free/css/all.min.css">
+    <!-- Select2 CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
 </head>
 
 <body class="hold-transition sidebar-mini">
@@ -239,6 +241,7 @@
             <!-- Main content -->
             <section class="content" id="content">
 
+
                 {{-- Content in here --}}
 
             </section>
@@ -271,6 +274,9 @@
     </script>
     <!-- AdminLTE App -->
     <script src="https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/js/adminlte.min.js"></script>
+    <!-- Select2 JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+    </script>
     {{-- One Page Route --}}
     <script>
         $(document).ready(function() {
@@ -300,6 +306,11 @@
 
             // Muat konten awal
             loadContent('home');
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+            $('.select2').select2();
         });
     </script>
 </body>
