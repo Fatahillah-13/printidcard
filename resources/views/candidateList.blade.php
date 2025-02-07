@@ -64,8 +64,8 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label>Level Pegawai</label>
-                                        <select class="form-control select2" name="state" style="width: 100%;">
-                                            <option>Operator</option>
+                                        <select class="form-control select2" style="width: 100%">
+                                            <option selected="selected">Operator</option>
                                             <option>Staf</option>
                                             <option>Senior Staf</option>
                                             <option>Leader</option>
@@ -86,8 +86,15 @@
                                         </select>
                                     </div>
                                     <div class="form-group">
-                                        <label for="birthdate">Tanggal Lahir</label>
-                                        <input type="date" class="form-control" id="birtdhdate">
+                                        <label>Date:</label>
+                                        <div class="input-group date" id="reservationdate" data-target-input="nearest">
+                                            <input type="text" class="form-control datetimepicker-input"
+                                                data-target="#reservationdate" />
+                                            <div class="input-group-append" data-target="#reservationdate"
+                                                data-toggle="datetimepicker">
+                                                <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="startdate">Tanggal Masuk Kerja</label>
@@ -436,3 +443,9 @@
         <!-- /.card -->
     </div>
 </div>
+
+<script>
+    $(document).ready(function() {
+        $('.select2').select2()
+    });
+</script>
